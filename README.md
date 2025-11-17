@@ -1,4 +1,4 @@
-# AWS Todo App Deployment Project
+# AWS![1763359976414](image/README/1763359976414.png)![1763359988048](image/README/1763359988048.png)![1763360008764](image/README/1763360008764.png) Todo App Deployment Project
 
 A comprehensive infrastructure-as-code project demonstrating the deployment of a full-stack Todo web application on AWS using two distinct environments: Development (EC2-based) and Production (ECS-based). This project serves as a reference implementation showcasing AWS best practices, containerization, CI/CD pipelines, and scalable architecture patterns.
 
@@ -74,11 +74,11 @@ git clone https://github.com/Jayce-Anh/todo_app-infra.git
 
 **Development Environment**:
 
-![Dev Architecture](./media/image1.png)
+<img src="./media/image1.png" alt="Dev Architecture" width="800">
 
 **Production Environment**:
 
-![Prod Architecture](./media/image2.png)
+<img src="./media/image2.png" alt="Prod Architecture" width="800">
 
 ### 3. Deployment Plans
 
