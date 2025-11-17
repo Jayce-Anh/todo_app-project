@@ -725,7 +725,7 @@ You have successfully deployed a full-stack Todo application on AWS with both De
 - ✅ Multi-AZ deployment with Auto Scaling Group
 - ✅ Application Load Balancer with health checks
 - ✅ Automatic failover between availability zones
-- ✅ CPU-based auto-scaling (70% threshold)
+- ✅ CPU-based auto-scaling (90% threshold)
 - ✅ Self-healing: failed instances automatically replaced
 - ✅ Cost-effective: scales down during low traffic
 
