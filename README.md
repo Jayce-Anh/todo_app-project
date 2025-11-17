@@ -1,4 +1,4 @@
-# AWS![1763359976414](image/README/1763359976414.png)![1763359988048](image/README/1763359988048.png)![1763360008764](image/README/1763360008764.png) Todo App Deployment Project
+# AWS Todo App Deployment Project
 
 A comprehensive infrastructure-as-code project demonstrating the deployment of a full-stack Todo web application on AWS using two distinct environments: Development (EC2-based) and Production (ECS-based). This project serves as a reference implementation showcasing AWS best practices, containerization, CI/CD pipelines, and scalable architecture patterns.
 
