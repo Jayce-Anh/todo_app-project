@@ -1,0 +1,15 @@
+FROM node:23-alpine
+  
+WORKDIR /app
+  
+# Install dependencies based on the preferred package manager
+COPY . .
+
+# Build application
+RUN yarn install --frozen-lockfile && \
+    yarn build 
+
+EXPOSE 3000
+
+# Start application - serve static files
+CMD ["npx", "serve@latest", "dist", "-l", "3000"]

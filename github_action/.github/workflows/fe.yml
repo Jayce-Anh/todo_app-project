@@ -1,0 +1,37 @@
+name: User-Deploy
+
+env:
+  PARAMETER_STORE: /dev/todo/fe/env
+  REGION: us-east-1
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, fe]
+    # environment: dev
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Load env from Parameter Store
+        run: |
+          cd ${{ github.workspace }}
+          aws ssm get-parameter --name $PARAMETER_STORE --region $REGION --with-decryption --output text --query Parameter.Value > .env
+      #     cat .env
+
+      # - name: Create .env
+      #   env:
+      #     DEV_ENV: ${{ secrets.DEV_ENV }}
+      #   run: |
+      #     printf "%s\n" "$DEV_ENV" > .env
+      #     cat .env
+
+      - name: Deploy
+        run: |
+          cd ${{ github.workspace }}
+          docker-compose --env-file .env up -d --build todo-fe
